@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sub Six Slide Show</title>			
+		<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	
+		<div id="wrap">
+			<a href="" class="hb">
+				<div class="c">
+					<img src="1.jpeg" alt="">
+				</div>
+			</a>
+				<div class="fullbg">
+					<img src="1.jpeg" alt="">				
+				</div>
+			<a href="" class="hb">
+				<div class="c">
+					<img src="2.jpeg" alt="">
+				</div>
+			</a>
+				<div class="fullbg">
+					<img src="2.jpeg" alt="">				
+				</div>	
+			<a href="" class="hb">
+				<div class="c">
+					<img src="3.jpeg" alt="">
+				</div>
+			</a>
+				<div class="fullbg">
+					<img src="3.jpeg" alt="">				
+				</div>				
+							
+		</div>
+			
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>	
+				
+			<script>	
+			
+			$(document).ready(function(){
+				var docWidth = $('body').width(),
+					$wrap = $('#wrap'),	
+					$images = $('#wrap .hb'),
+					slideWidth = $wrap.width();
+					
+				$(window).on('resize', function (){
+					docWidth = $('body').width();
+					slidesWidth = $wrap.width();					
+				})	
+				
+			$(document).mousemove(function(e){
+				var mouseX = e.pageX,
+					offset = mouseX / docWidth * slidesWidth -
+					mouseX / 2;	
+				$images.css({
+					'transform':'translate3d(' + -offset +
+					'px,0,0)',				
+				});	
+					
+			});	
+						
+		})
+			
+			
+			</script>
+			
+	</body>
+	</html>
