@@ -1,0 +1,75 @@
+
+	
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	
+	body,html{
+		overflow: hidden;
+		height: 100%;
+		background: #262525;	
+	}
+	
+	#wrap{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 150%;
+		height: 100%;
+		display: flex;
+		align-items: stretch;	
+		margin: 0 25%;
+	}
+	
+	.hb{
+		position: relative;
+		width: 23%;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		z-index: 2;
+		transform: scale(.97);	
+	}
+	
+	.c{
+		position: relative;
+		display: block;
+		max-width: 90%;
+	}
+	
+	.c img{
+			position: relative;
+			display: block;
+			width: 400px;
+			height: auto;
+			z-index: 2;
+			margin-top: 380px;
+			margin-bottom: 20px;
+			border: 12px solid white;	
+	}
+	
+	.fullbg{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			opacity: 0;
+			transition: transform .5s, opacity .5s;
+			transform: scale (1);
+			z-index: 1;	
+	}
+	
+	.fullbg img{
+	`		width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			opacity: .5;	
+	}
+	
+	.hb:hover + .fullbg{
+		opacity: 1;
+		transform: scale(1.02);	
+	}
+	
